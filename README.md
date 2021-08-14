@@ -104,39 +104,40 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ### 7	MODELO FÍSICO<br>
  
         CREATE TABLE Paciente (
-         nome varchar(50),
-         cpf varchar(50) primary KEY,
-         rg integer,
-         fk_Endereco_id integer,
-         foreign key (fk_Endereco_id) references Endereco(id),
-         data_nascimento date,
-         telefone integer);
-        
+        nome varchar(50),
+        cpf varchar(50) primary KEY,
+        rg varchar(50),
+        fk_Endereco_id integer,
+        foreign key (fk_Endereco_id) references Endereco(id),
+        data_nascimento date,
+        telefone varchar(50));
+
         CREATE TABLE Endereco (
-         id integer primary KEY,
-         cep integer,
-         numero integer,
-         estado varchar(50),
-         cidade varchar(50));
-        
+        id integer primary KEY,
+        cep varchar(50),
+        numero integer,
+        estado varchar(50),
+        cidade varchar(50));
+
         CREATE TABLE Prontuario (
-         prontuario_id integer primary KEY,
-         fk_Paciente_cpf varchar(50),
-         foreign key (fk_Paciente_cpf) references Paciente(cpf),
-         fk_hospital_id integer,
-         foreign key (fk_hospital_id) references Hospital(id),
-         nivel_de_urgencia varchar(50));
-        
+        prontuario_id integer primary KEY,
+        fk_Paciente_cpf varchar(50),
+        foreign key (fk_Paciente_cpf) references Paciente(cpf),
+        fk_hospital_id integer,
+        foreign key (fk_hospital_id) references Hospital(id),
+        nivel_de_urgencia varchar(50));
+
         CREATE TABLE Hospital (
-         id integer primary key,
-         nome_do_hospital varchar(80),
-         cep integer,
-         estado varchar(50),
-         cidade varchar(50),
-         leitos_disponíveis integer,
-         nome_medico varchar(50),
-         cpf_medico varchar(50),
-         crm_medico integer);
+        id integer primary key,
+        nome_do_hospital varchar(80),
+        cep varchar(50),
+        estado varchar(50),
+        cidade varchar(50),
+        leitos_disponíveis integer,
+        nome_medico varchar(50),
+        cpf_medico varchar(50),
+        crm_medico integer);
+
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
@@ -154,99 +155,100 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     --Create Table--
  
     CREATE TABLE Paciente (
-     nome varchar(50),
-     cpf varchar(50) primary KEY,
-     rg integer,
-     fk_Endereco_id integer,
-     foreign key (fk_Endereco_id) references Endereco(id),
-     data_nascimento date,
-     telefone integer);
+    nome varchar(50),
+    cpf varchar(50) primary KEY,
+    rg varchar(50),
+    fk_Endereco_id integer,
+    foreign key (fk_Endereco_id) references Endereco(id),
+    data_nascimento date,
+    telefone varchar(50));
 
     CREATE TABLE Endereco (
-     id integer primary KEY,
-     cep integer,
-     numero integer,
-     estado varchar(50),
-     cidade varchar(50));
+    id integer primary KEY,
+    cep varchar(50),
+    numero integer,
+    estado varchar(50),
+    cidade varchar(50));
 
     CREATE TABLE Prontuario (
-     prontuario_id integer primary KEY,
-     fk_Paciente_cpf varchar(50),
-     foreign key (fk_Paciente_cpf) references Paciente(cpf),
-     fk_hospital_id integer,
-     foreign key (fk_hospital_id) references Hospital(id),
-     nivel_de_urgencia varchar(50));
+    prontuario_id integer primary KEY,
+    fk_Paciente_cpf varchar(50),
+    foreign key (fk_Paciente_cpf) references Paciente(cpf),
+    fk_hospital_id integer,
+    foreign key (fk_hospital_id) references Hospital(id),
+    nivel_de_urgencia varchar(50));
 
     CREATE TABLE Hospital (
-     id integer primary key,
-     nome_do_hospital varchar(80),
-     cep integer,
-     estado varchar(50),
-     cidade varchar(50),
-     leitos_disponíveis integer,
-     nome_medico varchar(50),
-     cpf_medico varchar(50),
-     crm_medico integer);
- 
+    id integer primary key,
+    nome_do_hospital varchar(80),
+    cep varchar(50),
+    estado varchar(50),
+    cidade varchar(50),
+    leitos_disponíveis integer,
+    nome_medico varchar(50),
+    cpf_medico varchar(50),
+    crm_medico integer);
+
+
     --INSERT Dados--
  
     insert into endereco (id, cep, numero, estado, cidade)
-     values(1, 60713000, 12, 'CE','Fortaleza'),
-     (2, 64089204, 24,'PI','Teresina'),
-     (3, 85045520, 52,'PR','Guarapuava'),(4, 77423402, 42,'TO','Gurupi'),
-     (5, 69047147, 69,'AM','Manaus'),
-     (6, 60743000, 12, 'CE','Fortaleza'),
-     (7, 64049204, 24,'PI','Teresina'),
-     (8, 85055520, 52,'PR','Guarapuava'),
-     (9, 77443402, 42,'TO','Gurupi'),
-     (10, 69047147, 69,'AM','Manaus');
+         values(1, 60713000, 12, 'CE','Fortaleza'),
+         (2, 64089204, 24,'PI','Teresina'),
+         (3, 85045520, 52,'PR','Guarapuava'),(4, 77423402, 42,'TO','Gurupi'),
+         (5, 69047147, 69,'AM','Manaus'),
+         (6, 60743000, 12, 'CE','Fortaleza'),
+         (7, 64049204, 24,'PI','Teresina'),
+         (8, 85055520, 52,'PR','Guarapuava'),
+         (9, 77443402, 42,'TO','Gurupi'),
+         (10, 69047147, 69,'AM','Manaus');
 
     insert into hospital (id, nome_do_hospital, cep, estado, cidade, leitos_disponíveis,
-     nome_medico, cpf_medico, crm_medico)
-     values(1, 'Hospital São Camilo Fortaleza', 60160280, 'CE', 'Fortaleza', 40, 'Dr. Alceu Valença',
-     '42675216038', 1234),
-     (2, 'Hospital São Marcos', 64001280, 'PI', 'Teresina', 32, 'Dr. Davi Damiano', '92120563004',
-     4321),
-     (3, 'Hospital Regional de Guarapuava', 85053525, 'PR', 'Guarapuava', 52, 'Dra. Catherine Zardo',
-     '29688119083', 4728),
-     (4, 'Hospital Unimed Gurupi', 77103010, 'TO', 'Gurupi', 12, 'Dr. Tarcisio Acordon',
-     '38280205004', 1714),
-     (5, 'Hospital Adventista de Manaus', 69075351, 'AM', 'Manaus', 79, 'Dra. Ariana Grande',
-     '30143905007', 9877),
-     (6, 'Hospital São Camilo Fortaleza', 60160280, 'CE', 'Fortaleza', 40, 'Dr. Breno Vargas',
-     '41672216038', 1334),
-     (7, 'Hospital São Marcos', 64001280, 'PI', 'Teresina', 32, 'Dr. Davi Santiago', '92120583004',
-     4311),
-     (8, 'Hospital Regional de Guarapuava', 85053525, 'PR', 'Guarapuava', 52, 'Dra. Milene Souza',
-     '29687119083', 3728),
-     (9, 'Hospital Unimed Gurupi', 77103010, 'TO', 'Gurupi', 12, 'Dr. Delacruz Batista',
-     '38280206004', 1716),
-     (10, 'Hospital Adventista de Manaus', 69075351, 'AM', 'Manaus', 79, 'Dr. Emanuel Xavier',
-     '30144905007', 8877);
+         nome_medico, cpf_medico, crm_medico)
+         values(1, 'Hospital São Camilo Fortaleza', 60160280, 'CE', 'Fortaleza', 40, 'Dr. Alceu Valença',
+         '42675216038', 1234),
+         (2, 'Hospital São Marcos', 64001280, 'PI', 'Teresina', 32, 'Dr. Davi Damiano', '92120563004',
+         4321),
+         (3, 'Hospital Regional de Guarapuava', 85053525, 'PR', 'Guarapuava', 52, 'Dra. Catherine Zardo',
+         '29688119083', 4728),
+         (4, 'Hospital Unimed Gurupi', 77103010, 'TO', 'Gurupi', 12, 'Dr. Tarcisio Acordon',
+         '38280205004', 1714),
+         (5, 'Hospital Adventista de Manaus', 69075351, 'AM', 'Manaus', 79, 'Dra. Ariana Grande',
+         '30143905007', 9877),
+         (6, 'Hospital São Camilo Fortaleza', 60160280, 'CE', 'Fortaleza', 40, 'Dr. Breno Vargas',
+         '41672216038', 1334),
+         (7, 'Hospital São Marcos', 64001280, 'PI', 'Teresina', 32, 'Dr. Davi Santiago', '92120583004',
+         4311),
+         (8, 'Hospital Regional de Guarapuava', 85053525, 'PR', 'Guarapuava', 52, 'Dra. Milene Souza',
+         '29687119083', 3728),
+         (9, 'Hospital Unimed Gurupi', 77103010, 'TO', 'Gurupi', 12, 'Dr. Delacruz Batista',
+         '38280206004', 1716),
+         (10, 'Hospital Adventista de Manaus', 69075351, 'AM', 'Manaus', 79, 'Dr. Emanuel Xavier',
+         '30144905007', 8877);
 
-    insert into paciente (nome, cpf, rg, data_nascimento, telefone)
-     values('Julia Silva', '34696258084', 155781091, '2000-01-01', 99972-2019),
-     ('Willian Wirosse', '18799489074', 370079097, '2000-02-01', 99973-2020),
-     ('Matheus Melotti', '14354280051', 223256195, '2001-02-09', 99862-1197),
-     ('Guilherme Firme', '28370507093', 192179275, '2000-05-10', 99132-2119),
-     ('Adenildo Alves', '17112496020', 284065638, '2000-10-01', 99872-2021),
-     ('Anastacia Klein', '34693258084', 155781091, '2000-01-11', 99972-2030),
-     ('Waldir Xavier', '18799589074', 370079097, '2000-12-31', 99973-2040),
-     ('Thalita Melotti', '14354980051', 223256195, '2001-02-19', 99862-1157),
-     ('Ricardo Alves', '28370506093', 192179275, '2000-08-20', 99132-2419),
-     ('Ademar Maranguni', '17112436020', 284065638, '2000-11-21', 99872-2921);
+    insert into paciente (nome, cpf, rg, fk_endereco_id, data_nascimento, telefone)
+        values('Julia Silva', '34696258084', 232123238, 1, '2000-01-01', 99972-2019),
+        ('Willian Wirosse', '18799489074', 506051869, 2, '2000-02-01', 99973-2020),
+        ('Matheus Melotti', '14354280051', 102667251, 3, '2001-02-09', 99862-1197),
+        ('Guilherme Firme', '28370507093', 155258114, 4, '2000-05-10', 99132-2119),
+        ('Adenildo Alves', '17112496020', 329334372, 5, '2000-10-01', 99872-2021),
+        ('Anastacia Klein', '34693258084', 155781091, 6, '2000-01-11', 99972-2030),
+        ('Waldir Xavier', '18799589074', 370079097, 7, '2000-12-31', 99973-2040),
+        ('Thalita Melotti', '14354980051', 223256195, 8, '2001-02-19', 99862-1157),
+        ('Ricardo Alves', '28370506093', 192179275, 9, '2000-08-20', 99132-2419),
+        ('Ademar Maranguni', '17112436020', 284065638, 10, '2000-11-21', 99872-2921);
 
     insert into prontuario (prontuario_id, nivel_de_urgencia)
-     values(1, 'Urgente'),
-     (2, 'Nao urgente'),
-     (3, 'Emergencia'),
-     (4, 'Pouco Urgente'),
-     (5, 'Muito Urgente'),
-     (6, 'Urgente'),
-     (7, 'Nao urgente'),
-     (8, 'Emergencia'),
-     (9, 'Pouco Urgente'),
-     (10, 'Muito Urgente');
+         values(1, 'Urgente'),
+         (2, 'Nao urgente'),
+         (3, 'Emergencia'),
+         (4, 'Pouco Urgente'),
+         (5, 'Muito Urgente'),
+         (6, 'Urgente'),
+         (7, 'Nao urgente'),
+         (8, 'Emergencia'),
+         (9, 'Pouco Urgente'),
+         (10, 'Muito Urgente');
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
