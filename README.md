@@ -389,7 +389,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     from hospital h
     inner join prontuario p2 on (h.id = p2.fk_hospital_id)
     group by h.nome_do_hospital
-    order by max(h.leitos_disponíveis) desc;
+    order by sum(h.leitos_disponíveis) desc;
 
     select h.nome_do_hospital, p2.nivel_de_urgencia , count(p2.*)
     from prontuario p2
