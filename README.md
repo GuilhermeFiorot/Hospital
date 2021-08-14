@@ -272,18 +272,64 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+    
+    Select * From estado Where cidade = 'Gurupi';
+    Select * From hospital Where nome_do_hospital = 'Hospital São Marcos';
+    Select * From prontuario Where nivel_de_urgencia = 'Urgente';
+    Select * From endereco Where estado = 'CE';
+    
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
+    
+    select * from hospital where (leitos_disponíveis > 0 and leitos_disponíveis < 70);
+    select * from hospital where (estado = 'CE' or estado = 'PR');
+    select * from endereco where estado not in ('AM');                                                                          
+    select * from prontuario where (nivel_de_urgencia = 'Urgente' or nivel_de_urgencia = 'Nao urgente');
+    select * from endereco where estado not in ('PR');
+                                                                                      
     b) Criar no mínimo 3 consultas com operadores aritméticos 
+                                                                                      
+    select * from hospital where (leitos_disponíveis/2 > 20);
+    select * from hospital where (leitos_disponíveis-1 != 0);
+    select * from hospital where (leitos_disponíveis/5 > 10);
+    
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+
+    select nome_do_hospital, cep, estado, cidade as regiao, leitos_disponíveis as vagas from hospital;
+    select nome as paciente, cpf, rg, fk_endereco_id as id_endereco from paciente;
+    select fk_paciente_cpf as cpf_do_paciente, fk_hospital_id as hospital, nivel_de_urgencia from prontuario;
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
+    
+    Select * From paciente p Where nome like '%a'
+    Select * From paciente p Where nome like 'T%a'
+    Select * From endereco e Where e.cidade ilike 'G%'
+    Select * From endereco e Where e.estado like 'C_'
+    Select * From hospital h Where h.nome_do_hospital ilike '___'
+    
     b) Criar uma consulta para cada tipo de função data apresentada.
+    
+    Select * From paciente p Where p.data_nascimento = current_date;
+    Select p.data_nascimento, current_date as dia_atual, age(current_date,p.data_nascimento) From paciente p;
+    Select p.data_nascimento, date_part('days', p.data_nascimento) From paciente p;
+    Select isfinite(data_nascimento) From paciente p;
+    Select p.data_nascimento, extract('year' From p.data_nascimento) as datanascimento From paciente p;
+    Select concat(date_part('year', p.data_nascimento), ', ', p.nome) From paciente p;
+    Select * From paciente p Where data_nascimento > '2000-12-30';
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
+   
+    Delete From paciente Where rg = 155781091
+    Delete From hospital Where id = 10
+    Delete From endereco Where id = 10
+    
     b) Criar minimo 3 de atualização
+    
+    Update endereco Set cep = 62010820, estado = 'CE', cidade = 'Sobral' Where id = 8
+    Update paciente Set nome = 'Julia Silva Costa' Where rg = 155781091
+    Update prontuario Set nivel_de_urgencia = 'Muito urgente' Where prontuario_id = 1
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
