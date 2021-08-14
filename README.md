@@ -379,6 +379,45 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
+    
+    select p2.nivel_de_urgencia , count(p2.*)
+    from prontuario p2
+    inner join hospital h on (p2.fk_hospital_id = h.id)
+    group by p2.nivel_de_urgencia;
+
+    select h.nome_do_hospital , sum(h.leitos_disponíveis)
+    from hospital h
+    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+    group by h.nome_do_hospital
+    order by max(h.leitos_disponíveis) desc;
+
+    select h.nome_do_hospital, p2.nivel_de_urgencia , count(p2.*)
+    from prontuario p2
+    inner join hospital h on (p2.fk_hospital_id = h.id)
+    where p2.nivel_de_urgencia = 'Urgente'
+    group by h.nome_do_hospital
+    order by count(p2.*) desc;
+
+    select h.nome_do_hospital, count(h.nome_medico) as numero_de_medicos
+    from prontuario p2
+    inner join hospital h on (p2.fk_hospital_id = h.id)
+    group by h.nome_do_hospital
+    order by numero_de_medicos DESC;
+
+    select e.estado, count(e.cidade) as quant_de_cidades
+    from paciente p
+    inner join endereco e ON (p.fk_endereco_id = e.id)
+    group by e.estado
+    order by quant_de_cidades DESC;
+
+    select e.estado ,count(h.id) as quant_hospital
+    from paciente p
+    inner join endereco e ON (p.fk_endereco_id = e.id)
+    inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+    inner join hospital h on (p2.fk_hospital_id = h.id)
+    where e.estado = h.estado
+    group by e.estado
+    order by quant_hospital DESC;
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
