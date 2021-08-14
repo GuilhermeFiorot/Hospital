@@ -421,6 +421,14 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
+        
+    select * from prontuario p2 left join hospital h on h.id = p2.prontuario_id group by p2.prontuario_id, h.id ;
+    
+    select * from paciente p left join hospital h ON (p.fk_endereco_id = h.id);
+    
+    select * from prontuario p2 right join paciente p on p2.fk_paciente_cpf = p.cpf right join hospital h on h.id = p2.prontuario_id group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id , h.id;
+    
+    select * from prontuario p2 full join hospital h on h.id = p2.prontuario_id group by p2.prontuario_id, h.id ;
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
