@@ -424,6 +424,38 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
+
+        create view hospita_mais_leitos_disponiveis as
+        select h.nome_do_hospital , sum(h.leitos_disponíveis)
+        from hospital h
+        group by h.nome_do_hospital
+        order by sum(h.leitos_disponíveis) desc
+        limit 1;
+
+        create view hospita_menos_leitos_disponiveis as;
+        select h.nome_do_hospital , sum(h.leitos_disponíveis)
+        from hospital h
+        group by h.nome_do_hospital
+        order by sum(h.leitos_disponíveis) asc
+        limit 1;
+
+        create view quantidade_hospital_por_estado_dos_pacientes as
+        select e.estado ,count(h.id) as quant_hospital
+        from paciente p
+        inner join endereco e ON (p.fk_endereco_id = e.id)
+        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+        inner join hospital h on (p2.fk_hospital_id = h.id)
+        where e.estado = h.estado
+
+        create view pacientes_por_nivel_de_urgencia as;
+        select p2.nivel_de_urgencia, p.nome, count(p2.*)
+        from paciente p
+        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+        group by p2.nivel_de_urgencia
+        order by count(p2.*) desc;
+        group by e.estado
+        order by quant_hospital DESC;
+    
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
