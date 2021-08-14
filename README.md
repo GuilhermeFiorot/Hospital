@@ -460,7 +460,14 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
+    
+    select * from prontuario p2 join hospital h on h.id = p2.prontuario_id group by p2.prontuario_id, h.id ;
+    select * from prontuario p2 join paciente p on p2.fk_paciente_cpf = p.cpf join hospital h on h.id = p2.prontuario_id group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id, h.id;
+   
      b) Criar minimo 1 envolvendo algum tipo de junção
+   
+    select * from paciente p inner join endereco e on p.fk_endereco_id = e.id;
+    SELECT * FROM paciente p INNER JOIN hospital h ON (p.fk_endereco_id = h.id);
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
