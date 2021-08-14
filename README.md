@@ -333,7 +333,49 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
+    
+    select p.nome, e.estado, h.nome_do_hospital , p2.nivel_de_urgencia, h.nome_medico
+    from hospital h
+    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+    inner join paciente p on (p2.fk_paciente_cpf = p.cpf)
+    inner join endereco e on  (p.fk_endereco_id = e.id)
+    where p2.nivel_de_urgencia = 'Urgente'
+    order by p.nome;
+    
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+    
+    select p.nome, p.cpf, p.rg, e.estado, e.cidade, e.cep, e.numero
+    from paciente p
+    inner join endereco e on (p.fk_endereco_id = e.id)
+    where e.id between 2 and 5
+    order by p.nome;
+
+    select p.nome, p2.nivel_de_urgencia, h.nome_do_hospital, h.nome_medico
+    from hospital h
+    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+    inner join paciente p on (p.cpf = p2.fk_paciente_cpf)
+    where p2.nivel_de_urgencia = 'Emergencia'
+    order by p2.nivel_de_urgencia;
+
+    select h.leitos_disponíveis, h.cidade, h.estado, h.nome_do_hospital, h.nome_do_hospital, p2.nivel_de_urgencia 
+    from hospital h
+    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+    where h.leitos_disponíveis > 20
+    order by h.leitos_disponíveis asc;
+
+    select e.estado, e.cidade, p2.nivel_de_urgencia,
+    from paciente p
+    inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+    inner join endereco e on (p.fk_endereco_id = e.id)
+    where p2.nivel_de_urgencia = 'Nao urgente' and 'Pouco Urgente'
+    order by e.estado;
+
+    select e.estado, e.cidade, p2.nivel_de_urgencia,
+    from paciente p
+    inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+    inner join endereco e on (p.fk_endereco_id = e.id)
+    where p2.nivel_de_urgencia = 'Urgente' and 'Muito Urgente'
+    order by e.estado;
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
