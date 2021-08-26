@@ -37,9 +37,9 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
  
-> A Hospitais contra Covid podera forncer os principais relatórios:
+> A Hospitais contra Covid podera fornecer os principais relatórios:
 
-    1- Quantidade de infectados da corona vírus, 
+    1- Quantidade de Pacientes por Nivel de Urgencia, 
     2- Quantidade de hospitais por região,
     3- Regiões mais providas de investimentos na saúde,
     4- Fluxo de pacientes nos hospitais,
