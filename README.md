@@ -299,7 +299,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-        Codigo + Print em : [Collab](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/
     
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
         a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
