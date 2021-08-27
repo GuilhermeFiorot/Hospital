@@ -298,7 +298,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-
+[Collab](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
         https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/
     
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
