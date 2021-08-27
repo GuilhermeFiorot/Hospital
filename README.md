@@ -272,163 +272,175 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-    
-    Select * From estado Where cidade = 'Gurupi';
-    Select * From hospital Where nome_do_hospital = 'Hospital São Marcos';
-    Select * From prontuario Where nivel_de_urgencia = 'Urgente';
-    Select * From endereco Where estado = 'CE';
+
+        Select * From estado Where cidade = 'Gurupi';
+        Select * From hospital Where nome_do_hospital = 'Hospital São Marcos';
+        Select * From prontuario Where nivel_de_urgencia = 'Urgente';
+        Select * From endereco Where estado = 'CE';
     
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    
-    select * from hospital where (leitos_disponíveis > 0 and leitos_disponíveis < 70);
-    select * from hospital where (estado = 'CE' or estado = 'PR');
-    select * from endereco where estado not in ('AM');                                                                          
-    select * from prontuario where (nivel_de_urgencia = 'Urgente' or nivel_de_urgencia = 'Nao urgente');
-    select * from endereco where estado not in ('PR');
-                                                                                      
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-                                                                                      
-    select * from hospital where (leitos_disponíveis/2 > 20);
-    select * from hospital where (leitos_disponíveis-1 != 0);
-    select * from hospital where (leitos_disponíveis/5 > 10);
-    
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+        a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
 
-    select nome_do_hospital, cep, estado, cidade as regiao, leitos_disponíveis as vagas from hospital;
-    select nome as paciente, cpf, rg, fk_endereco_id as id_endereco from paciente;
-    select fk_paciente_cpf as cpf_do_paciente, fk_hospital_id as hospital, nivel_de_urgencia from prontuario;
+        select * from hospital where (leitos_disponíveis > 0 and leitos_disponíveis < 70);
+        select * from hospital where (estado = 'CE' or estado = 'PR');
+        select * from endereco where estado not in ('AM');                                                                          
+        select * from prontuario where (nivel_de_urgencia = 'Urgente' or nivel_de_urgencia = 'Nao urgente');
+        select * from endereco where estado not in ('PR');
+
+        b) Criar no mínimo 3 consultas com operadores aritméticos 
+
+        select * from hospital where (leitos_disponíveis/2 > 20);
+        select * from hospital where (leitos_disponíveis-1 != 0);
+        select * from hospital where (leitos_disponíveis/5 > 10);
+
+        c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+
+        select nome_do_hospital, cep, estado, cidade as regiao, leitos_disponíveis as vagas from hospital;
+        select nome as paciente, cpf, rg, fk_endereco_id as id_endereco from paciente;
+        select fk_paciente_cpf as cpf_do_paciente, fk_hospital_id as hospital, nivel_de_urgencia from prontuario;
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    
-    Select * From paciente p Where nome like '%a'
-    Select * From paciente p Where nome like 'T%a'
-    Select * From endereco e Where e.cidade ilike 'G%'
-    Select * From endereco e Where e.estado like 'C_'
-    Select * From hospital h Where h.nome_do_hospital ilike '___'
-    
-    b) Criar uma consulta para cada tipo de função data apresentada.
-    
-    Select * From paciente p Where p.data_nascimento = current_date;
-    Select p.data_nascimento, current_date as dia_atual, age(current_date,p.data_nascimento) From paciente p;
-    Select p.data_nascimento, date_part('days', p.data_nascimento) From paciente p;
-    Select isfinite(data_nascimento) From paciente p;
-    Select p.data_nascimento, extract('year' From p.data_nascimento) as datanascimento From paciente p;
-    Select concat(date_part('year', p.data_nascimento), ', ', p.nome) From paciente p;
-    Select * From paciente p Where data_nascimento > '2000-12-30';
+        a) Criar outras 5 consultas que envolvam like ou ilike
+
+        Select * From paciente p Where nome like '%a'
+        Select * From paciente p Where nome like 'T%a'
+        Select * From endereco e Where e.cidade ilike 'G%'
+        Select * From endereco e Where e.estado like 'C_'
+        Select * From hospital h Where h.nome_do_hospital ilike '___'
+
+        b) Criar uma consulta para cada tipo de função data apresentada.
+
+        Select * From paciente p Where p.data_nascimento = current_date;
+        Select p.data_nascimento, current_date as dia_atual, age(current_date,p.data_nascimento) From paciente p;
+        Select p.data_nascimento, date_part('days', p.data_nascimento) From paciente p;
+        Select isfinite(data_nascimento) From paciente p;
+        Select p.data_nascimento, extract('year' From p.data_nascimento) as datanascimento From paciente p;
+        Select concat(date_part('year', p.data_nascimento), ', ', p.nome) From paciente p;
+        Select * From paciente p Where data_nascimento > '2000-12-30';
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-   
-    Delete From paciente Where rg = 155781091
-    Delete From hospital Where id = 10
-    Delete From endereco Where id = 10
-    
-    b) Criar minimo 3 de atualização
-    
-    Update endereco Set cep = 62010820, estado = 'CE', cidade = 'Sobral' Where id = 8
-    Update paciente Set nome = 'Julia Silva Costa' Where rg = 155781091
-    Update prontuario Set nivel_de_urgencia = 'Muito urgente' Where prontuario_id = 1
+        a) Criar minimo 3 de exclusão
+
+        Delete From paciente Where rg = 155781091
+        Delete From hospital Where id = 10
+        Delete From endereco Where id = 10
+
+        b) Criar minimo 3 de atualização
+
+        Update endereco Set cep = 62010820, estado = 'CE', cidade = 'Sobral' Where id = 8
+        Update paciente Set nome = 'Julia Silva Costa' Where rg = 155781091
+        Update prontuario Set nivel_de_urgencia = 'Muito urgente' Where prontuario_id = 1
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    
-    select p.nome, e.estado, h.nome_do_hospital , p2.nivel_de_urgencia, h.nome_medico
-    from hospital h
-    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-    inner join paciente p on (p2.fk_paciente_cpf = p.cpf)
-    inner join endereco e on  (p.fk_endereco_id = e.id)
-    where p2.nivel_de_urgencia = 'Urgente'
-    order by p.nome;
-    
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
-    
-    select p.nome, p.cpf, p.rg, e.estado, e.cidade, e.cep, e.numero
-    from paciente p
-    inner join endereco e on (p.fk_endereco_id = e.id)
-    where e.id between 2 and 5
-    order by p.nome;
+        a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
 
-    select p.nome, p2.nivel_de_urgencia, h.nome_do_hospital, h.nome_medico
-    from hospital h
-    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-    inner join paciente p on (p.cpf = p2.fk_paciente_cpf)
-    where p2.nivel_de_urgencia = 'Emergencia'
-    order by p2.nivel_de_urgencia;
+        select p.nome, e.estado, h.nome_do_hospital , p2.nivel_de_urgencia, h.nome_medico
+        from hospital h
+        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+        inner join paciente p on (p2.fk_paciente_cpf = p.cpf)
+        inner join endereco e on  (p.fk_endereco_id = e.id)
+        where p2.nivel_de_urgencia = 'Urgente'
+        order by p.nome;
 
-    select h.leitos_disponíveis, h.cidade, h.estado, h.nome_do_hospital, h.nome_do_hospital, p2.nivel_de_urgencia 
-    from hospital h
-    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-    where h.leitos_disponíveis > 20
-    order by h.leitos_disponíveis asc;
+        b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
-    select e.estado, e.cidade, p2.nivel_de_urgencia,
-    from paciente p
-    inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-    inner join endereco e on (p.fk_endereco_id = e.id)
-    where p2.nivel_de_urgencia = 'Nao urgente' and 'Pouco Urgente'
-    order by e.estado;
+        select p.nome, p.cpf, p.rg, e.estado, e.cidade, e.cep, e.numero
+        from paciente p
+        inner join endereco e on (p.fk_endereco_id = e.id)
+        where e.id between 2 and 5
+        order by p.nome;
 
-    select e.estado, e.cidade, p2.nivel_de_urgencia,
-    from paciente p
-    inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-    inner join endereco e on (p.fk_endereco_id = e.id)
-    where p2.nivel_de_urgencia = 'Urgente' and 'Muito Urgente'
-    order by e.estado;
+        select p.nome, p2.nivel_de_urgencia, h.nome_do_hospital, h.nome_medico
+        from hospital h
+        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+        inner join paciente p on (p.cpf = p2.fk_paciente_cpf)
+        where p2.nivel_de_urgencia = 'Emergencia'
+        order by p2.nivel_de_urgencia;
+
+        select h.leitos_disponíveis, h.cidade, h.estado, h.nome_do_hospital, h.nome_do_hospital, p2.nivel_de_urgencia 
+        from hospital h
+        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+        where h.leitos_disponíveis > 20
+        order by h.leitos_disponíveis asc;
+
+        select e.estado, e.cidade, p2.nivel_de_urgencia,
+        from paciente p
+        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+        inner join endereco e on (p.fk_endereco_id = e.id)
+        where p2.nivel_de_urgencia = 'Nao urgente' and 'Pouco Urgente'
+        order by e.estado;
+
+        select e.estado, e.cidade, p2.nivel_de_urgencia,
+        from paciente p
+        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+        inner join endereco e on (p.fk_endereco_id = e.id)
+        where p2.nivel_de_urgencia = 'Urgente' and 'Muito Urgente'
+        order by e.estado;
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
-    
-    select p2.nivel_de_urgencia , count(p2.*)
-    from prontuario p2
-    inner join hospital h on (p2.fk_hospital_id = h.id)
-    group by p2.nivel_de_urgencia;
+        a) Criar minimo 2 envolvendo algum tipo de junção
 
-    select h.nome_do_hospital , sum(h.leitos_disponíveis)
-    from hospital h
-    inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-    group by h.nome_do_hospital
-    order by sum(h.leitos_disponíveis) desc;
+        select p2.nivel_de_urgencia , count(p2.*)
+        from prontuario p2
+        inner join hospital h on (p2.fk_hospital_id = h.id)
+        group by p2.nivel_de_urgencia;
 
-    select h.nome_do_hospital, p2.nivel_de_urgencia , count(p2.*)
-    from prontuario p2
-    inner join hospital h on (p2.fk_hospital_id = h.id)
-    where p2.nivel_de_urgencia = 'Urgente'
-    group by h.nome_do_hospital
-    order by count(p2.*) desc;
+        select h.nome_do_hospital , sum(h.leitos_disponíveis)
+        from hospital h
+        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
+        group by h.nome_do_hospital
+        order by sum(h.leitos_disponíveis) desc;
 
-    select h.nome_do_hospital, count(h.nome_medico) as numero_de_medicos
-    from prontuario p2
-    inner join hospital h on (p2.fk_hospital_id = h.id)
-    group by h.nome_do_hospital
-    order by numero_de_medicos DESC;
+        select h.nome_do_hospital, p2.nivel_de_urgencia , count(p2.*)
+        from prontuario p2
+        inner join hospital h on (p2.fk_hospital_id = h.id)
+        where p2.nivel_de_urgencia = 'Urgente'
+        group by h.nome_do_hospital
+        order by count(p2.*) desc;
 
-    select e.estado, count(e.cidade) as quant_de_cidades
-    from paciente p
-    inner join endereco e ON (p.fk_endereco_id = e.id)
-    group by e.estado
-    order by quant_de_cidades DESC;
+        select h.nome_do_hospital, count(h.nome_medico) as numero_de_medicos
+        from prontuario p2
+        inner join hospital h on (p2.fk_hospital_id = h.id)
+        group by h.nome_do_hospital
+        order by numero_de_medicos DESC;
 
-    select e.estado ,count(h.id) as quant_hospital
-    from paciente p
-    inner join endereco e ON (p.fk_endereco_id = e.id)
-    inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-    inner join hospital h on (p2.fk_hospital_id = h.id)
-    where e.estado = h.estado
-    group by e.estado
-    order by quant_hospital DESC;
+        select e.estado, count(e.cidade) as quant_de_cidades
+        from paciente p
+        inner join endereco e ON (p.fk_endereco_id = e.id)
+        group by e.estado
+        order by quant_de_cidades DESC;
+
+        select e.estado ,count(h.id) as quant_hospital
+        from paciente p
+        inner join endereco e ON (p.fk_endereco_id = e.id)
+        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
+        inner join hospital h on (p2.fk_hospital_id = h.id)
+        where e.estado = h.estado
+        group by e.estado
+        order by quant_hospital DESC;
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-    a) Criar minimo 1 de cada tipo
-        
-    select * from prontuario p2 left join hospital h on h.id = p2.prontuario_id group by p2.prontuario_id, h.id ;
+        a) Criar minimo 1 de cada tipo
+
+        select * 
+        from prontuario p2 
+        left join hospital h on h.id = p2.prontuario_id 
+        group by p2.prontuario_id, h.id ;
+
+        select * 
+        from paciente p 
+        left join hospital h on (p.fk_endereco_id = h.id);
+
+        select * 
+        from prontuario p2 
+        right join paciente p on p2.fk_paciente_cpf = p.cpf 
+        right join hospital h on h.id = p2.prontuario_id 
+        group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id , h.id;
     
-    select * from paciente p left join hospital h ON (p.fk_endereco_id = h.id);
-    
-    select * from prontuario p2 right join paciente p on p2.fk_paciente_cpf = p.cpf right join hospital h on h.id = p2.prontuario_id group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id , h.id;
-    
-    select * from prontuario p2 full join hospital h on h.id = p2.prontuario_id group by p2.prontuario_id, h.id ;
+        select * 
+        from prontuario p2 
+        full join hospital h on h.id = p2.prontuario_id 
+        group by p2.prontuario_id, h.id ;
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
@@ -440,7 +452,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         order by sum(h.leitos_disponíveis) desc
         limit 1;
 
-        create view hospita_menos_leitos_disponiveis as;
+        create view hospita_menos_leitos_disponiveis as
         select h.nome_do_hospital , sum(h.leitos_disponíveis)
         from hospital h
         group by h.nome_do_hospital
@@ -455,7 +467,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         inner join hospital h on (p2.fk_hospital_id = h.id)
         where e.estado = h.estado
 
-        create view pacientes_por_nivel_de_urgencia as;
+        create view pacientes_por_nivel_de_urgencia as
         select p2.nivel_de_urgencia, p.nome, count(p2.*)
         from paciente p
         inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
@@ -465,17 +477,45 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         order by quant_hospital DESC;
     
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+    
+        create view regiao_mais_leitos_disponiveis as 
+        select h.estado, h.cidade, sum(h.leitos_disponíveis) as leitos 
+        from hospital h 
+        where (h.leitos_disponíveis >= 0) 
+        group by h.estado, h.cidade 
+        order by    sum(h.leitos_disponíveis) 
+        desc limit 1;
+    
+        create view regiao_menos_leitos_disponiveis as
+        select h.estado, h.cidade, sum(h.leitos_disponíveis) as leitos
+        from hospital h
+        group by h.estado, h.cidade
+        order by sum(h.leitos_disponíveis)
+        asc limit 1;
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
-     a) Criar minimo 1 envolvendo GROUP BY
+        a) Criar minimo 1 envolvendo GROUP BY
     
-    select * from prontuario p2 join hospital h on h.id = p2.prontuario_id group by p2.prontuario_id, h.id ;
-    select * from prontuario p2 join paciente p on p2.fk_paciente_cpf = p.cpf join hospital h on h.id = p2.prontuario_id group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id, h.id;
+        select * 
+        from prontuario p2 
+        join hospital h on h.id = p2.prontuario_id 
+        group by p2.prontuario_id, h.id ;
+    
+        select * 
+        from prontuario p2 
+        join paciente p on p2.fk_paciente_cpf = p.cpf 
+        join hospital h on h.id = p2.prontuario_id 
+        group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id, h.id;
    
-     b) Criar minimo 1 envolvendo algum tipo de junção
+        b) Criar minimo 1 envolvendo algum tipo de junção
    
-    select * from paciente p inner join endereco e on p.fk_endereco_id = e.id;
-    SELECT * FROM paciente p INNER JOIN hospital h ON (p.fk_endereco_id = h.id);
+        select * 
+        from paciente p 
+        inner join endereco e on p.fk_endereco_id = e.id;
+    
+        select * 
+        from paciente p 
+        inner join hospital h ON (p.fk_endereco_id = h.id);
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
