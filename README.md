@@ -273,40 +273,40 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-        Select * From estado Where cidade = 'Gurupi';
-        Select * From hospital Where nome_do_hospital = 'Hospital São Marcos';
-        Select * From prontuario Where nivel_de_urgencia = 'Urgente';
-        Select * From endereco Where estado = 'CE';
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=cJjh0bitpUhY&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=-5PRjG1kp1_r&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=Tk9uZYn3p-HF&line=3&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=9ec_29IlqEor&line=1&uniqifier=1
     
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
         a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
 
-        select * from hospital where (leitos_disponíveis > 0 and leitos_disponíveis < 70);
-        select * from hospital where (estado = 'CE' or estado = 'PR');
-        select * from endereco where estado not in ('AM');                                                                          
-        select * from prontuario where (nivel_de_urgencia = 'Urgente' or nivel_de_urgencia = 'Nao urgente');
-        select * from endereco where estado not in ('PR');
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=XtFpqsuNq1KY&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=Vv6fFYJ5rAIy&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=q-Tz09avrDQ6&line=2&uniqifier=1                                                       
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=Fg7CUkG1rDgm&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=gcluLQrvrOTy&line=1&uniqifier=1
 
         b) Criar no mínimo 3 consultas com operadores aritméticos 
 
-        select * from hospital where (leitos_disponíveis/2 > 20);
-        select * from hospital where (leitos_disponíveis-1 != 0);
-        select * from hospital where (leitos_disponíveis/5 > 10);
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=wyPkcbhRrc4q&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=fL1csh57rdDx&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=2hwtFo69rdHa&line=1&uniqifier=1
 
         c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
-        select nome_do_hospital, cep, estado, cidade as regiao, leitos_disponíveis as vagas from hospital;
-        select nome as paciente, cpf, rg, fk_endereco_id as id_endereco from paciente;
-        select fk_paciente_cpf as cpf_do_paciente, fk_hospital_id as hospital, nivel_de_urgencia from prontuario;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=V3geHIzxqLFG&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=lzjtuLERsH7e&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=3cfeBNDXsICf&line=1&uniqifier=1
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
         a) Criar outras 5 consultas que envolvam like ou ilike
 
-        Select * From paciente p Where nome like '%a'
-        Select * From paciente p Where nome like 'T%a'
-        Select * From endereco e Where e.cidade ilike 'G%'
-        Select * From endereco e Where e.estado like 'C_'
-        Select * From hospital h Where h.nome_do_hospital ilike '___'
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=ahfB_bcqsiSF&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=ISozIP5Hsl25&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=MEeButNnsmcd&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=4OGY1jkUsmwV&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=ZsRcXNvJsl52&line=1&uniqifier=1
 
         b) Criar uma consulta para cada tipo de função data apresentada.
 
