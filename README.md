@@ -104,7 +104,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
- ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/modelo_logico.png?raw=true "Modelo Logico")
+ ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/modelo_logico_hospcontracovid.png?raw=true "Modelo Logico")
     
 ### 7	MODELO FÍSICO<br>
  
