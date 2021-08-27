@@ -273,250 +273,76 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=cJjh0bitpUhY&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=-5PRjG1kp1_r&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=Tk9uZYn3p-HF&line=3&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=9ec_29IlqEor&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M
     
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
         a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=XtFpqsuNq1KY&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=Vv6fFYJ5rAIy&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=q-Tz09avrDQ6&line=2&uniqifier=1                                                       
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=Fg7CUkG1rDgm&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=gcluLQrvrOTy&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=-L_bAVLZqei3
 
         b) Criar no mínimo 3 consultas com operadores aritméticos 
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=wyPkcbhRrc4q&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=fL1csh57rdDx&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=2hwtFo69rdHa&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=wDGL4nYcqlf6
 
         c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=V3geHIzxqLFG&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=lzjtuLERsH7e&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=3cfeBNDXsICf&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=O2OB9ys-qn6Y
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
         a) Criar outras 5 consultas que envolvam like ou ilike
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=ahfB_bcqsiSF&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=ISozIP5Hsl25&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=MEeButNnsmcd&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=4OGY1jkUsmwV&line=1&uniqifier=1
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=ZsRcXNvJsl52&line=1&uniqifier=1
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=D-6yLmUmsdMn&line=1&uniqifier=1
 
         b) Criar uma consulta para cada tipo de função data apresentada.
 
-        Select * From paciente p Where p.data_nascimento = current_date;
-        Select p.data_nascimento, current_date as dia_atual, age(current_date,p.data_nascimento) From paciente p;
-        Select p.data_nascimento, date_part('days', p.data_nascimento) From paciente p;
-        Select isfinite(data_nascimento) From paciente p;
-        Select p.data_nascimento, extract('year' From p.data_nascimento) as datanascimento From paciente p;
-        Select concat(date_part('year', p.data_nascimento), ', ', p.nome) From paciente p;
-        Select * From paciente p Where data_nascimento > '2000-12-30';
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=1famV6oTsev6&line=1&uniqifier=1
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
         a) Criar minimo 3 de exclusão
 
-        Delete From paciente Where rg = 155781091
-        Delete From hospital Where id = 10
-        Delete From endereco Where id = 10
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=iiCs1Aadu-0U
 
         b) Criar minimo 3 de atualização
 
-        Update endereco Set cep = 62010820, estado = 'CE', cidade = 'Sobral' Where id = 8
-        Update paciente Set nome = 'Julia Silva Costa' Where rg = 155781091
-        Update prontuario Set nivel_de_urgencia = 'Muito urgente' Where prontuario_id = 1
+       https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=B874hooXvgjw
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
 
-        select p.nome, e.estado, h.nome_do_hospital , p2.nivel_de_urgencia, h.nome_medico
-        from hospital h
-        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-        inner join paciente p on (p2.fk_paciente_cpf = p.cpf)
-        inner join endereco e on  (p.fk_endereco_id = e.id)
-        where p2.nivel_de_urgencia = 'Urgente'
-        order by p.nome;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=BKK-uMRR8CWl
 
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
-        select p.nome, p.cpf, p.rg, e.estado, e.cidade, e.cep, e.numero
-        from paciente p
-        inner join endereco e on (p.fk_endereco_id = e.id)
-        where e.id between 2 and 5
-        order by p.nome;
-
-        select p.nome, p2.nivel_de_urgencia, h.nome_do_hospital, h.nome_medico
-        from hospital h
-        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-        inner join paciente p on (p.cpf = p2.fk_paciente_cpf)
-        where p2.nivel_de_urgencia = 'Emergencia'
-        order by p2.nivel_de_urgencia;
-
-        select h.leitos_disponíveis, h.cidade, h.estado, h.nome_do_hospital, h.nome_do_hospital, p2.nivel_de_urgencia 
-        from hospital h
-        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-        where h.leitos_disponíveis > 20
-        order by h.leitos_disponíveis asc;
-
-        select e.estado, e.cidade, p2.nivel_de_urgencia,
-        from paciente p
-        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-        inner join endereco e on (p.fk_endereco_id = e.id)
-        where p2.nivel_de_urgencia = 'Nao urgente' and 'Pouco Urgente'
-        order by e.estado;
-
-        select e.estado, e.cidade, p2.nivel_de_urgencia,
-        from paciente p
-        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-        inner join endereco e on (p.fk_endereco_id = e.id)
-        where p2.nivel_de_urgencia = 'Urgente' and 'Muito Urgente'
-        order by e.estado;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=RVxOgRoz8Diq
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
         a) Criar minimo 2 envolvendo algum tipo de junção
 
-        select p2.nivel_de_urgencia , count(p2.*)
-        from prontuario p2
-        inner join hospital h on (p2.fk_hospital_id = h.id)
-        group by p2.nivel_de_urgencia;
-
-        select h.nome_do_hospital , sum(h.leitos_disponíveis)
-        from hospital h
-        inner join prontuario p2 on (h.id = p2.fk_hospital_id)
-        group by h.nome_do_hospital
-        order by sum(h.leitos_disponíveis) desc;
-
-        select h.nome_do_hospital, p2.nivel_de_urgencia , count(p2.*)
-        from prontuario p2
-        inner join hospital h on (p2.fk_hospital_id = h.id)
-        where p2.nivel_de_urgencia = 'Urgente'
-        group by h.nome_do_hospital
-        order by count(p2.*) desc;
-
-        select h.nome_do_hospital, count(h.nome_medico) as numero_de_medicos
-        from prontuario p2
-        inner join hospital h on (p2.fk_hospital_id = h.id)
-        group by h.nome_do_hospital
-        order by numero_de_medicos DESC;
-
-        select e.estado, count(e.cidade) as quant_de_cidades
-        from paciente p
-        inner join endereco e ON (p.fk_endereco_id = e.id)
-        group by e.estado
-        order by quant_de_cidades DESC;
-
-        select e.estado ,count(h.id) as quant_hospital
-        from paciente p
-        inner join endereco e ON (p.fk_endereco_id = e.id)
-        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-        inner join hospital h on (p2.fk_hospital_id = h.id)
-        where e.estado = h.estado
-        group by e.estado
-        order by quant_hospital DESC;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=10S7M2ntpIJU
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
         a) Criar minimo 1 de cada tipo
 
-        select * 
-        from prontuario p2 
-        left join hospital h on h.id = p2.prontuario_id 
-        group by p2.prontuario_id, h.id ;
-
-        select * 
-        from paciente p 
-        left join hospital h on (p.fk_endereco_id = h.id);
-
-        select * 
-        from prontuario p2 
-        right join paciente p on p2.fk_paciente_cpf = p.cpf 
-        right join hospital h on h.id = p2.prontuario_id 
-        group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id , h.id;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=bHiZulNipLfx
     
-        select * 
-        from prontuario p2 
-        full join hospital h on h.id = p2.prontuario_id 
-        group by p2.prontuario_id, h.id ;
-
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
 
-        create view hospita_mais_leitos_disponiveis as
-        select h.nome_do_hospital , sum(h.leitos_disponíveis)
-        from hospital h
-        group by h.nome_do_hospital
-        order by sum(h.leitos_disponíveis) desc
-        limit 1;
-
-        create view hospita_menos_leitos_disponiveis as
-        select h.nome_do_hospital , sum(h.leitos_disponíveis)
-        from hospital h
-        group by h.nome_do_hospital
-        order by sum(h.leitos_disponíveis) asc
-        limit 1;
-
-        create view quantidade_hospital_por_estado_dos_pacientes as
-        select e.estado ,count(h.id) as quant_hospital
-        from paciente p
-        inner join endereco e ON (p.fk_endereco_id = e.id)
-        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-        inner join hospital h on (p2.fk_hospital_id = h.id)
-        where e.estado = h.estado
-
-        create view pacientes_por_nivel_de_urgencia as
-        select p2.nivel_de_urgencia, p.nome, count(p2.*)
-        from paciente p
-        inner join prontuario p2 on (p.cpf = p2.fk_paciente_cpf)
-        group by p2.nivel_de_urgencia
-        order by count(p2.*) desc;
-        group by e.estado
-        order by quant_hospital DESC;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=NyctY7KWfN-4
     
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
     
-        create view regiao_mais_leitos_disponiveis as 
-        select h.estado, h.cidade, sum(h.leitos_disponíveis) as leitos 
-        from hospital h 
-        where (h.leitos_disponíveis >= 0) 
-        group by h.estado, h.cidade 
-        order by    sum(h.leitos_disponíveis) 
-        desc limit 1;
-    
-        create view regiao_menos_leitos_disponiveis as
-        select h.estado, h.cidade, sum(h.leitos_disponíveis) as leitos
-        from hospital h
-        group by h.estado, h.cidade
-        order by sum(h.leitos_disponíveis)
-        asc limit 1;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=5qWU4vGyfQP0
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
         a) Criar minimo 1 envolvendo GROUP BY
     
-        select * 
-        from prontuario p2 
-        join hospital h on h.id = p2.prontuario_id 
-        group by p2.prontuario_id, h.id ;
-    
-        select * 
-        from prontuario p2 
-        join paciente p on p2.fk_paciente_cpf = p.cpf 
-        join hospital h on h.id = p2.prontuario_id 
-        group by p2.fk_paciente_cpf, p.cpf, p2.prontuario_id, h.id;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=CswaQNv1fWSb
    
         b) Criar minimo 1 envolvendo algum tipo de junção
    
-        select * 
-        from paciente p 
-        inner join endereco e on p.fk_endereco_id = e.id;
+        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=JgtWQiadfZs7
     
-        select * 
-        from paciente p 
-        inner join hospital h ON (p.fk_endereco_id = h.id);
-
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
 ### 10 RELATÓRIOS E GRÁFICOS
