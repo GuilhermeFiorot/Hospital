@@ -84,23 +84,28 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
      Cep: campo que armazena o número do Registro Geral para cada hospital.<br>
      Estado: campo que armazena o número id do endereço para cada hospital.<br>
      Cidade: campo que armazena a data de nascimento para cada hospital.<br>
-     Leitos disponiveis: campo que armazena o número de telefone para cada hospital.<br>
-     Nome medico: campo que armazena o nome para cada medico do Hospital.<br>
-     Cpf Medico: campo que armazena a Cadastro de Pessoa Fisica para cada medico do Hospital.<br>
-     Crm Medico: campo que armazena o Conselho Regional de Medicina para cada medico do Hospital.<br>
-    
+     Leitos disponiveis: Campo que armazena o número de telefone para cada hospital.<br>
+     Medico ID: Campo que armazena o número do ID do medico para cada hospital.<br>
+
     Prontuario: Tabela que armazena as informações relativas ao prontuario<br>
      Id: campo que armazena o Id para cada prontuario.<br>
      Paciente CPF: campo que armazena o número de Cadastro de Pessoa Física para cada prontuario do paciente.<br>
      Hospital ID: campo que armazena o número do ID do hospital para cada prontuario.<br>
      Nivel de urgencia: campo que armazena o nivel de urgência para cada prontuario.<br>
-     
+         
+    Medico:
+     Id: campo que armazena o id do medico.<br>
+     Nome medico: campo que armazena o nome para cada medico do Hospital.<br>
+     Cpf Medico: campo que armazena a Cadastro de Pessoa Fisica para cada medico do Hospital.<br>
+     Crm Medico: campo que armazena o Conselho Regional de Medicina para cada medico do Hospital.<br>
+    
 ### 6	MODELO LÓGICO<br>
         a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
- ![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/ModeloLogico_HospitalContraCovid.png?raw=true "Modelo Logico")
- 
+ ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/modelo_logico.png?raw=true "Modelo Logico")
+ ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
+    
 ### 7	MODELO FÍSICO<br>
  
         CREATE TABLE Paciente (
@@ -130,13 +135,19 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         CREATE TABLE Hospital (
         id integer primary key,
         nome_do_hospital varchar(80),
-        cep varchar(50),
+        cep integer,
         estado varchar(50),
         cidade varchar(50),
         leitos_disponíveis integer,
+        fk_medico_id integer,
+        foreign KEY (fk_medico_id) REFERENCES medico(id));
+
+        CREATE TABLE Medico(
+        id integer primary key,
         nome_medico varchar(50),
         cpf_medico varchar(50),
-        crm_medico integer);
+        crm_medico varchar(50));
+
 
         
        
@@ -151,6 +162,8 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     DROP TABLE Prontuario CASCADE;
 
     DROP TABLE Endereco CASCADE;
+       
+    DROP TABLE Medico CASCADE;
     
     --Create Table--
  
@@ -181,13 +194,18 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     CREATE TABLE Hospital (
     id integer primary key,
     nome_do_hospital varchar(80),
-    cep varchar(50),
+    cep integer,
     estado varchar(50),
     cidade varchar(50),
     leitos_disponíveis integer,
+    fk_medico_id integer,
+    foreign KEY (fk_medico_id) REFERENCES medico(id));
+
+    CREATE TABLE Medico(
+    id integer primary key,
     nome_medico varchar(50),
     cpf_medico varchar(50),
-    crm_medico integer);
+    crm_medico varchar(50));
 
 
     --INSERT Dados--
@@ -195,7 +213,8 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     insert into endereco (id, cep, numero, estado, cidade)
          values(1, 60713000, 12, 'CE','Fortaleza'),
          (2, 64089204, 24,'PI','Teresina'),
-         (3, 85045520, 52,'PR','Guarapuava'),(4, 77423402, 42,'TO','Gurupi'),
+         (3, 85045520, 52,'PR','Guarapuava'),
+         (4, 77423402, 42,'TO','Gurupi'),
          (5, 69047147, 69,'AM','Manaus'),
          (6, 60743000, 12, 'CE','Fortaleza'),
          (7, 64049204, 24,'PI','Teresina'),
@@ -203,28 +222,17 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
          (9, 77443402, 42,'TO','Gurupi'),
          (10, 69047147, 69,'AM','Manaus');
 
-    insert into hospital (id, nome_do_hospital, cep, estado, cidade, leitos_disponíveis,
-         nome_medico, cpf_medico, crm_medico)
-         values(1, 'Hospital São Camilo Fortaleza', '60160280', 'CE', 'Fortaleza', 40, 'Dr. Alceu Valença',
-         '42675216038', 1234),
-         (2, 'Hospital São Marcos', '64001280', 'PI', 'Teresina', 32, 'Dr. Davi Damiano', '92120563004',
-         4321),
-         (3, 'Hospital Regional de Guarapuava', '85053525', 'PR', 'Guarapuava', 52, 'Dra. Catherine Zardo',
-         '29688119083', 4728),
-         (4, 'Hospital Unimed Gurupi', '77103010', 'TO', 'Gurupi', 12, 'Dr. Tarcisio Acordon',
-         '38280205004', 1714),
-         (5, 'Hospital Adventista de Manaus', '69075351', 'AM', 'Manaus', 79, 'Dra. Ariana Grande',
-         '30143905007', 9877),
-         (6, 'Hospital São Camilo Fortaleza', '60160280', 'CE', 'Fortaleza', 40, 'Dr. Breno Vargas',
-         '41672216038', 1334),
-         (7, 'Hospital São Marcos', '64001280', 'PI', 'Teresina', 32, 'Dr. Davi Santiago', '92120583004',
-         4311),
-         (8, 'Hospital Regional de Guarapuava', '85053525', 'PR', 'Guarapuava', 52, 'Dra. Milene Souza',
-         '29687119083', 3728),
-         (9, 'Hospital Unimed Gurupi', '77103010', 'TO', 'Gurupi', 12, 'Dr. Delacruz Batista',
-         '38280206004', 1716),
-         (10, 'Hospital Adventista de Manaus', '69075351', 'AM', 'Manaus', 79, 'Dr. Emanuel Xavier',
-         '30144905007', 8877);
+    insert into hospital (id, nome_do_hospital, cep, estado, cidade, leitos_disponíveis, fk_medico_id)
+        values(1, 'Hospital São Camilo Fortaleza', 60160280, 'CE','Fortaleza', 40, 1),
+        (2, 'Hospital São Marcos', 64001280, 'PI','Teresina', 32, 2),
+        (3, 'Hospital Regional de Guarapuava', 85053525, 'PR','Guarapuava', 52, 3),
+        (4, 'Hospital Unimed Gurupi', 77103010, 'TO','Gurupi', 12, 4),
+        (5, 'Hospital Adventista de Manaus', 69075351, 'AM','Manaus', 79, 5),
+        (6, 'Hospital São Camilo Fortaleza', 60160280, 'CE','Fortaleza', 40, 6),
+        (7, 'Hospital São Marcos', 64001280, 'PI','Teresina', 32, 7),
+        (8, 'Hospital Regional de Guarapuava', 85053525, 'PR','Guarapuava', 52, 8),
+        (9, 'Hospital Unimed Gurupi', 77103010, 'TO','Gurupi', 12, 9),
+        (10, 'Hospital Adventista de Manaus', 69075351, 'AM','Manaus', 79, 10);
 
     insert into paciente (nome, cpf, rg, fk_endereco_id, data_nascimento, telefone)
         values('Julia Silva', '34696258084', '232123238', 1, '2000-01-01', '99972-2019'),
@@ -249,6 +257,18 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
          (8, 'Emergencia'),
          (9, 'Pouco Urgente'),
          (10, 'Muito Urgente');
+    
+    insert into medico(id, nome_medico, cpf_medico, crm_medico)
+        values(1, 'Dr. Alceu Valença', '42675216038', 1234),
+        (2, 'Dr. Davi Damiano', '92120563004', 4321 ),
+        (3, 'Dra. Catherine Zardo', '29688119083', 4728),
+        (4, 'Dr. Tarcisio Acordon', '38280205004', 1714),
+        (5, 'Dra. Ariana Grande', '30143905007', 9877),
+        (6, 'Dr. Breno Vargas', '41672216038', 1334),
+        (7, 'Dr. Davi Santiago', '92120583004', 4311),
+        (8, 'Dra. Milene Souza', '29687119083', 3728),
+        (9, 'Dr. Delacruz Batista', '38280206004', 1716),
+        (10, 'Dr. Emanuel Xavier', '30144905007', 8877);
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
@@ -259,7 +279,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
  
  Select * 
     From hospital
- ![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/tabela_hospital.png?raw=true "Tabela Hospital")
+ ![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/tabela_hospital1.png?raw=true "Tabela Hospital")
  
  Select * 
     From paciente
@@ -268,6 +288,10 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
  Select * 
     From prontuario
  ![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/tabela_prontuario.png?raw=true "Tabela Prontuario")
+ 
+  Select * 
+    From medico
+ ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/tabela_medico.png?raw=true "Tabela Medico")
  
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
