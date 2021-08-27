@@ -41,9 +41,9 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
     1- Quantidade de Pacientes por Nivel de Urgencia, 
     2- Quantidade de hospitais por região,
-    3- Regiões mais providas de investimentos na saúde,
+    3- Regiões com mais leitos disponiveis,
     4- Fluxo de pacientes nos hospitais,
-    5- Regiões mais afetadas pela covid.
+    5- Regiões mais afetadas por Nivel de Urgencia.
  
 
 #### 4.3 TABELA DE DADOS DO SISTEMA:
