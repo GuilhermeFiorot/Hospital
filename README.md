@@ -298,76 +298,76 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-[Collab](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/
+        
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
     
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
         a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=-L_bAVLZqei3
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
         b) Criar no mínimo 3 consultas com operadores aritméticos 
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=wDGL4nYcqlf6
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
         c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=O2OB9ys-qn6Y
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
         a) Criar outras 5 consultas que envolvam like ou ilike
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=D-6yLmUmsdMn&line=1&uniqifier=1
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
         b) Criar uma consulta para cada tipo de função data apresentada.
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=1famV6oTsev6&line=1&uniqifier=1
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
         a) Criar minimo 3 de exclusão
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=iiCs1Aadu-0U
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
         b) Criar minimo 3 de atualização
 
-       https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=B874hooXvgjw
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=BKK-uMRR8CWl
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=RVxOgRoz8Diq
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
         a) Criar minimo 2 envolvendo algum tipo de junção
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=10S7M2ntpIJU
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
         a) Criar minimo 1 de cada tipo
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=bHiZulNipLfx
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
     
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
 
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=NyctY7KWfN-4
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
     
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
     
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=5qWU4vGyfQP0
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
         a) Criar minimo 1 envolvendo GROUP BY
     
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=CswaQNv1fWSb
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
    
         b) Criar minimo 1 envolvendo algum tipo de junção
    
-        https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=JgtWQiadfZs7
+        [Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
     
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
 
