@@ -92,7 +92,8 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
      Paciente CPF: campo que armazena o número de Cadastro de Pessoa Física para cada prontuario do paciente.<br>
      Hospital ID: campo que armazena o número do ID do hospital para cada prontuario.<br>
      Nivel de urgencia: campo que armazena o nivel de urgência para cada prontuario.<br>
-         
+     Data prontuario: campo que armazena a data de atendimento do paciente no hospital.<br>
+    
     Medico:
      Id: campo que armazena o id do medico.<br>
      Nome medico: campo que armazena o nome para cada medico do Hospital.<br>
@@ -104,7 +105,6 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
  ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/modelo_logico.png?raw=true "Modelo Logico")
- ![Alt text](https://raw.githubusercontent.com/GuilhermeFiorot/Hospital/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
     
 ### 7	MODELO FÍSICO<br>
  
@@ -130,7 +130,8 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         foreign key (fk_Paciente_cpf) references Paciente(cpf),
         fk_hospital_id integer,
         foreign key (fk_hospital_id) references Hospital(id),
-        nivel_de_urgencia varchar(50));
+        nivel_de_urgencia varchar(50),
+        data_prontuario date);
 
         CREATE TABLE Hospital (
         id integer primary key,
@@ -189,7 +190,8 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     foreign key (fk_Paciente_cpf) references Paciente(cpf),
     fk_hospital_id integer,
     foreign key (fk_hospital_id) references Hospital(id),
-    nivel_de_urgencia varchar(50));
+    nivel_de_urgencia varchar(50),
+    data_prontuario date);
 
     CREATE TABLE Hospital (
     id integer primary key,
@@ -246,17 +248,17 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         ('Ricardo Alves', '28370506093', '192179275', 9, '2000-08-20', '99132-2419'),
         ('Ademar Maranguni', '17112436020', '284065638', 10, '2000-11-21', '99872-2921');
 
-    insert into prontuario (prontuario_id, nivel_de_urgencia)
-         values(1, 'Urgente'),
-         (2, 'Nao urgente'),
-         (3, 'Emergencia'),
-         (4, 'Pouco Urgente'),
-         (5, 'Muito Urgente'),
-         (6, 'Urgente'),
-         (7, 'Nao urgente'),
-         (8, 'Emergencia'),
-         (9, 'Pouco Urgente'),
-         (10, 'Muito Urgente');
+    insert into prontuario (prontuario_id, fk_paciente_cpf, fk_hospital_id ,nivel_de_urgencia, data_prontuario)
+        values(1, '34696258084', 1, 'Urgente', '2021-01-09'),
+        (2, '18799489074', 2,'Nao urgente', '2021-03-19'),
+        (3, '14354280051', 3,'Emergencia', '2020-09-09'),
+        (4, '28370507093', 4,'Pouco Urgente', '2021-01-01'),
+        (5, '17112496020', 5,'Muito Urgente', '2021-08-27'),
+        (6, '34693258084', 6,'Urgente', '2020-11-09'),
+        (7, '18799589074', 7, 'Nao urgente', '2021-03-21'),
+        (8, '14354980051', 8,'Emergencia', '2021-01-19'),
+        (9, '28370506093', 9,'Pouco Urgente', '2021-02-09'),
+        (10, '17112436020', 10,'Muito Urgente', '2020-04-19');
     
     insert into medico(id, nome_medico, cpf_medico, crm_medico)
         values(1, 'Dr. Alceu Valença', '42675216038', 1234),
@@ -287,7 +289,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
  
  Select * 
     From prontuario
- ![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/tabela_prontuario.png?raw=true "Tabela Prontuario")
+ ![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/tabela_prontuario1.png?raw=true "Tabela Prontuario")
  
   Select * 
     From medico
