@@ -55,7 +55,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     
 ### 5.MODELO CONCEITUAL<br>
         
-![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/ModeloConceitual_HospiralContraCovid.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/GuilhermeFiorot/Hospital/blob/master/images/modeloconceitual_hospcontracovid.png?raw=true "Modelo Conceitual")
         
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Guilherme e Matheus, sem alterações]
