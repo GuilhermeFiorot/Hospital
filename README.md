@@ -374,16 +374,25 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ### 10 RELATÓRIOS E GRÁFICOS
 
 #### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
-#### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
-#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
-
     
+[Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
+    
+#### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
+
+[Codigo + Resultado](https://colab.research.google.com/drive/1HrHPFqiefvlehPXBQPVJBg-KE9hxvD3i#scrollTo=kCGKpGono59M/)
+
+#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
 #### a) Modelo (pecha kucha)<br>
-#### b) Tempo de apresentação 6:40 
-
+    
+![Arquivo PDF do slide no modelo pecha kucha feito para Hospitais contra o covid](https://github.com/GuilhermeFiorot/Hospital/blob/master/arquivos/PowerPoint-PechaKucha.pdf?raw=true "Hospitais contra o covid")
+    
+#### b) Tempo de apresentação 6:40
+    
+[Apresentação no youtube](https://youtu.be/xhh0CUu6qJQ)
+    
 ># Marco de Entrega 03: Itens 10 e 11<br>
 <br>
 <br>
